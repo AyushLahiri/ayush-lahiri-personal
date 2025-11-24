@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name | Researcher</title>
+    <title>Ayush Lahiri | Researcher</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         /* --- CSS STYLES --- */
         :root {
-            --primary-color: #2c3e50; /* Dark Blue/Grey for professional look */
-            --accent-color: #3498db; /* Blue for links */
-            --text-color: #333;
-            --bg-color: #fcfcfc;
-            --section-spacing: 40px;
+            --primary-color: #2c3e50; /* Dark Blue/Grey for headers */
+            --accent-color: #3498db;  /* Blue for links */
+            --text-color: #333;       /* Dark grey for text */
+            --bg-color: #ffffff;      /* PURE WHITE BACKGROUND */
+            --section-spacing: 50px;
         }
 
         body {
@@ -27,21 +27,22 @@
         }
 
         .container {
-            max-width: 900px;
+            /* INCREASED WIDTH from 900px to 1100px to fix "thin columns" */
+            max-width: 1100px; 
             width: 100%;
-            padding: 40px 20px;
+            padding: 60px 20px;
             display: flex;
             flex-direction: row;
-            gap: 50px;
+            gap: 60px; /* Increased gap between sidebar and content */
         }
 
         /* Sidebar / Header Area */
         aside {
             flex: 1;
-            min-width: 250px;
+            min-width: 260px; /* Fixed minimum width for sidebar */
             text-align: right;
             border-right: 1px solid #eee;
-            padding-right: 40px;
+            padding-right: 50px;
         }
 
         aside h1 {
@@ -54,15 +55,15 @@
         aside p {
             margin-bottom: 20px;
             font-size: 1.1rem;
-            color: #666;
+            color: #555;
         }
 
         .contact-links a {
             display: block;
             color: var(--text-color);
             text-decoration: none;
-            margin-bottom: 8px;
-            font-size: 0.95rem;
+            margin-bottom: 10px;
+            font-size: 1rem;
             transition: color 0.2s;
         }
 
@@ -71,14 +72,15 @@
         }
 
         .contact-links i {
-            margin-right: 8px;
+            margin-right: 10px;
             width: 20px;
             text-align: center;
+            color: #777;
         }
 
         /* Main Content Area */
         main {
-            flex: 2.5;
+            flex: 3; /* Content takes up 3 parts, Sidebar takes 1 */
         }
 
         section {
@@ -87,30 +89,37 @@
 
         h2 {
             font-size: 1.4rem;
-            border-bottom: 2px solid #eee;
+            border-bottom: 2px solid #f0f0f0;
             padding-bottom: 10px;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
             color: var(--primary-color);
             text-transform: uppercase;
             letter-spacing: 1px;
         }
 
-        /* Research Paper Formatting */
+        /* Paper / Project Styling */
         .paper {
-            margin-bottom: 25px;
+            margin-bottom: 35px;
         }
 
         .paper-title {
             font-weight: 700;
-            font-size: 1.1rem;
+            font-size: 1.15rem;
             display: block;
             color: var(--primary-color);
+            margin-bottom: 4px;
         }
 
         .paper-meta {
             font-style: italic;
             color: #666;
             font-size: 0.95rem;
+            margin-bottom: 8px;
+        }
+
+        /* Button Styling */
+        .paper-links {
+            margin-top: 10px;
         }
 
         .paper-links a {
@@ -119,8 +128,10 @@
             text-decoration: none;
             margin-right: 10px;
             border: 1px solid var(--accent-color);
-            padding: 2px 8px;
-            border-radius: 3px;
+            padding: 4px 10px;
+            border-radius: 4px;
+            display: inline-block;
+            transition: all 0.2s ease;
         }
 
         .paper-links a:hover {
@@ -129,9 +140,10 @@
         }
 
         /* Mobile Responsiveness */
-        @media (max-width: 768px) {
+        @media (max-width: 850px) {
             .container {
                 flex-direction: column;
+                padding: 30px 20px;
             }
             aside {
                 text-align: left;
@@ -139,6 +151,11 @@
                 border-bottom: 1px solid #eee;
                 padding-right: 0;
                 padding-bottom: 30px;
+                margin-bottom: 30px;
+            }
+            .contact-links a {
+                display: inline-block;
+                margin-right: 15px;
             }
         }
     </style>
@@ -146,115 +163,137 @@
 <body>
 
     <div class="container">
+        
+        <!-- SIDEBAR -->
         <aside>
-            <h1>[Ayush Lahiri]</h1>
-            <p>PData Scientist<br>Data Scientist at [HarrisX]</p>
+            <h1>Ayush Lahiri</h1>
+            <p>Data Scientist<br>HarrisX, Washington D.C.</p>
             
             <div class="contact-links">
                 <a href="mailto:ayush.lah@gmail.com"><i class="fas fa-envelope"></i> Email</a>
-                <a href="YOUR_CV_LINK.pdf"><i class="fas fa-file-alt"></i> CV / Resume</a>
+                <!-- Make sure your CV file is named correctly in your repo -->
+                <a href="cv.pdf"><i class="fas fa-file-alt"></i> CV / Resume</a>
                 <a href="https://github.com/AyushLahiri"><i class="fab fa-github"></i> GitHub</a>
                 <a href="https://www.linkedin.com/in/ayush-l-24b527ba/"><i class="fab fa-linkedin"></i> LinkedIn</a>
             </div>
         </aside>
 
+        <!-- MAIN CONTENT -->
         <main>
+            
+            <!-- ABOUT SECTION -->
             <section>
                 <h2>About Me</h2>
                 <p>
-                    Hi! I’m Ayush. I’m a data scientist fascinated by the intersection of <strong>development economics, public policy, and computational methods</strong>, obssessed with economic measurement in low and middle income countries
-                    I enjoy torturing myself thinking about measuring the unmeasurable (or is it ? ) — using <strong>satellite imagery, Call Data Records, digital traces, and NLP</strong> and try to contribute towards helping people with the tools I have (currently limited to a sort of fancy keyboard).
-        
+                    Hi! I’m Ayush. I’m a data scientist fascinated by the intersection of <strong>development economics, public policy, and computational methods</strong>, obsessed with economic measurement in low- and middle-income countries.
                 </p>
                 <p>
-                    Currently, I work as a <strong>Data Scientist at HarrisX</strong> in Washington D.C., where I build ML pipelines for large-scale surveys for clients as International Development, Politics and Private firms.   
+                    I enjoy torturing myself thinking about measuring the unmeasurable (or is it?) — using <strong>satellite imagery, Call Data Records, digital traces, and NLP</strong> to help people with the tools I have (currently limited to a sort of fancy keyboard).
+                </p>
+                <p>
+                    Currently, I work as a <strong>Data Scientist at HarrisX</strong> in Washington D.C., where I build ML pipelines for large-scale surveys for clients in International Development, Politics, and the Private sector.    
                 </p>
             </section>
 
+            <!-- WORKING PAPERS SECTION -->
             <section>
                 <h2>Working Papers & Research</h2>
 
+                <!-- Paper 1 -->
                 <div class="paper">
                     <span class="paper-title">Does Caste Homogeneity Enhance Visible Development? The Disconnect Between Reported Expenditure and Nighttime Lights in Rural India</span>
                     <div class="paper-meta">
                         with B. Holland & H. Kumar • <em>Working Paper (Economics)</em>, 2024
                     </div>
                     <p>
-                        We test the efficacy of fiscal decentralization by asking if reported public spending translates into visible development (VIIRS nighttime luminosity) in 5,842 Gram Panchayats (Odisha). We find that changes in **reported expenditure had almost no predictive power** for changes in luminosity, a disconnect that persists regardless of the ethnic homogeneity of the local council.
+                        We test the efficacy of fiscal decentralization by asking if reported public spending translates into visible development (VIIRS nighttime luminosity) in 5,842 Gram Panchayats (Odisha). We find that changes in <strong>reported expenditure had almost no predictive power</strong> for changes in luminosity, a disconnect that persists regardless of the ethnic homogeneity of the local council.
                     </p>
-                    <div class="https://github.com/AyushLahiri/ayush-lahiri-personal/blob/main/caste-expend-nightlight.pdf">
-                        <a href="#">PDF</a>
+                    <div class="paper-links">
+                        <!-- Corrected Link Structure -->
+                        <a href="https://github.com/AyushLahiri/ayush-lahiri-personal/blob/main/caste-expend-nightlight.pdf">PDF</a>
                     </div>
                 </div>
 
+                <!-- Paper 2 -->
                 <div class="paper">
                     <span class="paper-title">Predicting Urban Heat Island Intensity via Computer Vision and Spatial Feature Distribution</span>
                     <div class="paper-meta">
                         <em>Working Paper (Geospatial/CV)</em>, 2024
                     </div>
                     <p>
-                        A novel methodology utilizing **Convolutional Neural Networks (CNNs)** to analyze the *visual spatial distribution* of urban forms (buildings, streets, vegetation) to predict UHI intensity. This approach moves beyond aggregated metrics to provide a preemptive tool for urban planners.
+                        A novel methodology utilizing <strong>Convolutional Neural Networks (CNNs)</strong> to analyze the <em>visual spatial distribution</em> of urban forms (buildings, streets, vegetation) to predict UHI intensity. This approach moves beyond aggregated metrics to provide a preemptive tool for urban planners.
                     </p>
-                    <div class="https://github.com/AyushLahiri/ayush-lahiri-personal/blob/main/UHI.pdf">
-                        <a href="#">PDF</a>
+                    <div class="paper-links">
+                        <!-- Corrected Link Structure -->
+                        <a href="https://github.com/AyushLahiri/ayush-lahiri-personal/blob/main/UHI.pdf">PDF</a>
                     </div>
                 </div>
 
+                <!-- Paper 3 -->
                 <div class="paper">
                     <span class="paper-title">Explaining Public Park Reviews in California using Natural Language Processing</span>
                     <div class="paper-meta">
                         with H. Kumar • <em>Massive Data Institute: Greenspace Challenge</em>, 2023
                     </div>
                     <p>
-                        We use NLP to measure the *lived experience* of public greenspaces Implemented a two-stage pipeline (**LDA** + **DeBERTa-based Aspect-Based Sentiment Analysis**) on Google Reviews. Found a divergence between equitable *spatial access* and deficits in *perceived quality* (safety/maintenance) in lower-income tracts.
+                        We use NLP to measure the <em>lived experience</em> of public greenspaces. Implemented a two-stage pipeline (<strong>LDA</strong> + <strong>DeBERTa-based Aspect-Based Sentiment Analysis</strong>) on Google Reviews. Found a divergence between equitable <em>spatial access</em> and deficits in <em>perceived quality</em> (safety/maintenance) in lower-income tracts.
                     </p>
-                    <div class="https://github.com/AyushLahiri/ayush-lahiri-personal/blob/main/ABSA.pdf">
-                        <a href="#">PDF</a>
+                    <div class="paper-links">
+                         <!-- Corrected Link Structure -->
+                        <a href="https://github.com/AyushLahiri/ayush-lahiri-personal/blob/main/ABSA.pdf">PDF</a>
                     </div>
                 </div>
             </section>
 
+            <!-- METHODOLOGICAL PROJECTS SECTION -->
             <section>
                 <h2>Methodological Projects</h2>
 
+                <!-- Project 1 -->
                 <div class="paper">
                     <span class="paper-title">Ideology Analysis of Indian Supreme Court Judges</span>
+                    <div class="paper-meta">
+                         <em>Advanced NLP / Computational Law</em>
+                    </div>
                     <p>
-                        An attempt to ideologically scale Indian Supreme Court judges using judgement texts, focusing on government-involved cases. The methodology involved comparing **STM, BERTopic, and GPT-4 Zero-shot** topic modeling for case classification, followed by **Doc2Vec** with dimensionality reduction for ideological scaling.
+                        An attempt to ideologically scale Indian Supreme Court judges using judgement texts, focusing on government-involved cases. The methodology involved comparing <strong>STM, BERTopic, and GPT-4 Zero-shot</strong> topic modeling for case classification, followed by <strong>Doc2Vec</strong> with dimensionality reduction for ideological scaling.
                     </p>
-                    <div class="https://github.com/AyushLahiri/ayush-lahiri-personal/blob/main/Ayush%20Lahiri_Supreme%20Court%20Ideological%20Scaling.pdf">
+                    <div class="paper-links">
+                         <!-- Corrected Link Structure -->
+                        <a href="https://github.com/AyushLahiri/ayush-lahiri-personal/blob/main/Ayush%20Lahiri_Supreme%20Court%20Ideological%20Scaling.pdf">PDF</a>
                     </div>
                 </div>
 
                 <div class="paper">
                     <span class="paper-title">Predicting Gentrification in DC</span>
                     <div class="paper-meta">
+                         <em>Unsupervised Clustering / Causal Prediction</em>
                     </div>
                     <p>
-                        Used unsupervised clustering on census variables (2012–2021) to create a bias-avoiding typology of gentrification in D.C. A **Random Forest** was then trained (using 2000 data and **SMOTE** oversampling) to predict 2031 gentrification probability, achieving **91% balanced testing accuracy**.
+                        Used unsupervised clustering on census variables (2012–2021) to create a bias-avoiding typology of gentrification in D.C. A <strong>Random Forest</strong> was then trained (using 2000 data and <strong>SMOTE</strong> oversampling) to predict 2031 gentrification probability, achieving <strong>91% balanced testing accuracy</strong>.
                     </p>
-                    <div class="https://github.com/AyushLahiri/Predicting-Gentrification-in-DC">
-                        <a href="#">GitHub Repo</a>
+                    <div class="paper-links">
+                        <a href="https://github.com/AyushLahiri/Predicting-Gentrification-in-DC">GitHub Repo</a>
                     </div>
                 </div>
+
+                <!-- Project 3: Dashboard (Moved inside Section properly) -->
+                <div class="paper">
+                    <span class="paper-title">Dashboard: Climate Change - Disparity in Responsibility and Impact</span>
+                    <div class="paper-meta">
+                        <em>Visualization</em>
+                    </div>
+                    <p>
+                        A dynamic <strong>R-Shiny dashboard</strong> synthesizing <strong>8 diverse datasets</strong> (NOAA, EM-DAT, PWT, Lucas Channel, etc.) to investigate the global disparity in climate change responsibility and impact. Demonstrating that high-income nations are the largest per capita contributors, while low-income nations exhibit significantly higher <strong>vulnerability and lower preparedness</strong> (ND-GAIN).
+                    </p>
+                    <div class="paper-links">
+                        <a href="https://ayushlahiri.shinyapps.io/Climate_Inequality/">View Dashboard</a>
+                    </div>
+                </div>
+
             </section>
         </main>
-
-            <div class="paper">
-                        <span class="paper-title">Dashboard: Climate Change - Disparity in Responsibility and Impact </span>
-                        <div class="paper-meta">
-                        </div>
-                        <p>
-                            dynamic **R-Shiny dashboard** synthesizing **8 diverse datasets** (NOAA, EM-DAT, PWT, Lucas Channel, etc.) to investigate the global disparity in climate change responsibility and impact. Demonstrating that high-income nations are the largest per capita contributors, while low-income nations exhibit significantly higher **vulnerability and lower preparedness** (ND-GAIN)
-                        </p>
-                        <div class="https://ayushlahiri.shinyapps.io/Climate_Inequality/">
-                            <a href="#">GitHub Repo</a>
-                        </div>
-                    </div>
-                </section>
-            </main>
-
-
+    </div>
 
 </body>
 </html>
