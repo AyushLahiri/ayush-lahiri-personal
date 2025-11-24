@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name | Researcher</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* --- CSS STYLES --- */
+        :root {
+            --primary-color: #2c3e50; /* Dark Blue/Grey for professional look */
+            --accent-color: #3498db; /* Blue for links */
+            --text-color: #333;
+            --bg-color: #fcfcfc;
+            --section-spacing: 40px;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 900px;
+            width: 100%;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: row;
+            gap: 50px;
+        }
+
+        /* Sidebar / Header Area */
+        aside {
+            flex: 1;
+            min-width: 250px;
+            text-align: right;
+            border-right: 1px solid #eee;
+            padding-right: 40px;
+        }
+
+        aside h1 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+            line-height: 1.2;
+        }
+
+        aside p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            color: #666;
+        }
+
+        .contact-links a {
+            display: block;
+            color: var(--text-color);
+            text-decoration: none;
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        .contact-links a:hover {
+            color: var(--accent-color);
+        }
+
+        .contact-links i {
+            margin-right: 8px;
+            width: 20px;
+            text-align: center;
+        }
+
+        /* Main Content Area */
+        main {
+            flex: 2.5;
+        }
+
+        section {
+            margin-bottom: var(--section-spacing);
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Research Paper Formatting */
+        .paper {
+            margin-bottom: 25px;
+        }
+
+        .paper-title {
+            font-weight: 700;
+            font-size: 1.1rem;
+            display: block;
+            color: var(--primary-color);
+        }
+
+        .paper-meta {
+            font-style: italic;
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        .paper-links a {
+            font-size: 0.85rem;
+            color: var(--accent-color);
+            text-decoration: none;
+            margin-right: 10px;
+            border: 1px solid var(--accent-color);
+            padding: 2px 8px;
+            border-radius: 3px;
+        }
+
+        .paper-links a:hover {
+            background-color: var(--accent-color);
+            color: white;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            aside {
+                text-align: left;
+                border-right: none;
+                border-bottom: 1px solid #eee;
+                padding-right: 0;
+                padding-bottom: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <aside>
+            <h1>[Your Name]</h1>
+            <p>Ph.D. Applicant<br>Research Assistant at [Current Inst]</p>
+            
+            <div class="contact-links">
+                <a href="mailto:your.email@example.com"><i class="fas fa-envelope"></i> Email</a>
+                <a href="YOUR_CV_LINK.pdf"><i class="fas fa-file-alt"></i> CV / Resume</a>
+                <a href="https://github.com/yourusername"><i class="fab fa-github"></i> GitHub</a>
+                <a href="https://linkedin.com/in/yourprofile"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="https://scholar.google.com"><i class="fas fa-graduation-cap"></i> Google Scholar</a>
+            </div>
+        </aside>
+
+        <main>
+            <section>
+                <h2>About Me</h2>
+                <p>
+                    I am a researcher interested in <strong>[Topic A]</strong>, <strong>[Topic B]</strong>, and <strong>[Topic C]</strong>. 
+                    Currently, I am working on [Brief description of current role].
+                </p>
+                <p>
+                    My goal is to apply computational methods to solve problems in [Field]. I have experience using [Tool 1] and [Tool 2] to analyze [Type of Data].
+                </p>
+            </section>
+
+            <section>
+                <h2>Working Papers & Publications</h2>
+
+                <div class="paper">
+                    <span class="paper-title">Title of Your Most Important Paper</span>
+                    <div class="paper-meta">
+                        with [Co-author Name] • <em>Under Review / Submitted to [Journal Name]</em>, 2025
+                    </div>
+                    <p>A one-sentence summary of what this paper proves or achieves.</p>
+                    <div class="paper-links">
+                        <a href="#">PDF</a>
+                        <a href="#">Code</a>
+                    </div>
+                </div>
+
+                <div class="paper">
+                    <span class="paper-title">Title of Another Research Project</span>
+                    <div class="paper-meta">
+                        with [Co-author Name] • <em>Proceedings of [Conference Name]</em>, 2024
+                    </div>
+                    <div class="paper-links">
+                        <a href="#">PDF</a>
+                        <a href="#">Abstract</a>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Projects</h2>
+                <ul>
+                    <li>
+                        <strong>Project Name:</strong> Brief description of a GitHub project or tool you built. 
+                        <a href="#" style="color: #3498db;">[Link]</a>
+                    </li>
+                    <li>
+                        <strong>Data Visualization Portfolio:</strong> A collection of dashboards creating using R Shiny/Python.
+                        <a href="#" style="color: #3498db;">[Link]</a>
+                    </li>
+                </ul>
+            </section>
+        </main>
+    </div>
+
+</body>
+</html>
